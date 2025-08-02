@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>قهر با حسن</title>
+  <style>
+    body {
+      background-color: #ffeef5;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      color: #ff3399;
+      font-size: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hearts, .sparkles {
+      position: absolute;
+      animation: float 6s infinite;
+      font-size: 30px;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-600px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>حسن جونم من هنوزم بات قهرم 👺<br>ولی خب شاااید اگه یه کاری بکنی ی کوچولو ببخشمت</div>
+
+  <!-- قلب‌ها و اکلیلا -->
+  <script>
+    const emoji = ['🩷', '✨'];
+    for (let i = 0; i < 100; i++) {
+      const el = document.createElement('div');
+      el.className = Math.random() > 0.5 ? 'hearts' : 'sparkles';
+      el.style.left = ${Math.random() * 100}%;
+      el.style.top = ${Math.random() * 100 + 600}px;
+      el.innerText = emoji[Math.floor(Math.random() * emoji.length)];
+      el.style.fontSize = ${Math.random() * 20 + 20}px;
+      el.style.animationDuration = ${Math.random() * 3 + 3}s;
+      document.body.appendChild(el);
+    }
+  </script>
+</body>
+</html>
